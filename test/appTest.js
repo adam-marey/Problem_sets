@@ -4,6 +4,8 @@ const avgValue = require('../problems/arrays/avgValue');
 const printObject = require('../problems/objects/printObject');
 const getFullName = require('../problems/objects/getFullName');
 const doesKeyExist = require('../problems/objects/doesKeyExist');
+const twoDimensionalTotal = require('../problems/arrays/twoDimensionalTotal');
+const valueCounter = require('../problems/objects/valueCounter');
 describe('isSorted()', function () {
   it('should return boolean true if numbers in array are in increasing order, false otherwise', function () {
     assert.equal(isSorted([3, 5, 11, 9, 15, 16]), false);
@@ -38,5 +40,30 @@ describe('doesKeyExist()', function () {
     assert.equal(doesKeyExist(obj, 'course'), true);
     assert.equal(doesKeyExist(obj, 'name'), true);
     assert.equal(doesKeyExist(obj, 'bootcamp'), false);
+  });
+});
+describe('twoDimensionalTotal()', function () {
+  it('should return number that is the sum of all numbers in the two dimensional array', function () {
+    var arr1 = [
+      [5, 2, 5, 3],
+      [12, 13],
+    ];
+
+    var arr2 = [[2], [1, 9], [1, 1, 1]];
+
+    assert.equal(twoDimensionalTotal(arr1), 40);
+    assert.equal(twoDimensionalTotal(arr2), 15);
+  });
+});
+describe('valueCounter()', function () {
+  it('should return a count of how many times the value repeats in the object', function () {
+    obj1 = { 1: 'Anne', 2: 'Alvin', 3: 'Anne', 4: 'Anne' };
+    result1 = 3;
+
+    obj2 = { Anne: 50, Alvin: 1, JJ: 100, Roman: 100 };
+    result2 = 0;
+
+    assert.equal(valueCounter(obj1, 'Anne'), result1);
+    assert.equal(valueCounter(obj1, 90), result2);
   });
 });
