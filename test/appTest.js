@@ -1,9 +1,9 @@
 const assert = require('assert');
-const isSorted = require('../problems/isSorted');
-const avgValue = require('../problems/avgValue');
-const printObject = require('../problems/printObject');
-const getFullName = require('../problems/getFullName');
-const doesKeyExist = require('../problems/doesKeyExist');
+const isSorted = require('../problems/arrays/isSorted');
+const avgValue = require('../problems/arrays/avgValue');
+const printObject = require('../problems/objects/printObject');
+const getFullName = require('../problems/objects/getFullName');
+const doesKeyExist = require('../problems/objects/doesKeyExist');
 describe('isSorted()', function () {
   it('should return boolean true if numbers in array are in increasing order, false otherwise', function () {
     assert.equal(isSorted([3, 5, 11, 9, 15, 16]), false);
