@@ -7,6 +7,7 @@ const doesKeyExist = require('../problems/objects/doesKeyExist');
 const twoDimensionalTotal = require('../problems/arrays/twoDimensionalTotal');
 const valueCounter = require('../problems/objects/valueCounter');
 const oddRange = require('../problems/arrays/oddRange');
+const isElement = require('../problems/arrays/isElement ');
 describe('isSorted()', function () {
   it('should return boolean true if numbers in array are in increasing order, false otherwise', function () {
     assert.equal(isSorted([3, 5, 11, 9, 15, 16]), false);
@@ -73,5 +74,12 @@ describe('oddRange()', function () {
     assert.deepEqual(oddRange(13), [1, 3, 5, 7, 9, 11, 13]);
     assert.deepEqual(oddRange(6), [1, 3, 5]);
     assert.deepEqual(oddRange(10), [1, 3, 5, 7, 9]);
+  });
+});
+describe('isElement()', function () {
+  it('should return a boolean indicating if the element is found inside the array', function () {
+    assert.equal(isElement([1, 2, 3, 4, 5], 5), true);
+    assert.equal(isElement(['a', 'b', 'c'], 'a'), true);
+    assert.equal(isElement(['a', 'b', 'c'], 'd'), false);
   });
 });
