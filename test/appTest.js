@@ -6,6 +6,7 @@ const getFullName = require('../problems/objects/getFullName');
 const doesKeyExist = require('../problems/objects/doesKeyExist');
 const twoDimensionalTotal = require('../problems/arrays/twoDimensionalTotal');
 const valueCounter = require('../problems/objects/valueCounter');
+const oddRange = require('../problems/arrays/oddRange');
 describe('isSorted()', function () {
   it('should return boolean true if numbers in array are in increasing order, false otherwise', function () {
     assert.equal(isSorted([3, 5, 11, 9, 15, 16]), false);
@@ -65,5 +66,12 @@ describe('valueCounter()', function () {
 
     assert.equal(valueCounter(obj1, 'Anne'), result1);
     assert.equal(valueCounter(obj1, 90), result2);
+  });
+});
+describe('oddRange()', function () {
+  it('should return an array containing all positive odd numbers up to `end`', function () {
+    assert.deepEqual(oddRange(13), [1, 3, 5, 7, 9, 11, 13]);
+    assert.deepEqual(oddRange(6), [1, 3, 5]);
+    assert.deepEqual(oddRange(10), [1, 3, 5, 7, 9]);
   });
 });
