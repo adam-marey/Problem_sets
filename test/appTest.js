@@ -8,6 +8,9 @@ const twoDimensionalTotal = require('../problems/arrays/twoDimensionalTotal');
 const valueCounter = require('../problems/objects/valueCounter');
 const oddRange = require('../problems/arrays/oddRange');
 const isElement = require('../problems/arrays/isElement');
+
+const fromMeToYou = require('../problems/loops/fromMeToYou');
+// tests
 describe('isSorted()', function () {
   it('should return boolean true if numbers in array are in increasing order, false otherwise', function () {
     assert.equal(isSorted([3, 5, 11, 9, 15, 16]), false);
@@ -81,5 +84,11 @@ describe('isElement()', function () {
     assert.equal(isElement([1, 2, 3, 4, 5], 5), true);
     assert.equal(isElement(['a', 'b', 'c'], 'a'), true);
     assert.equal(isElement(['a', 'b', 'c'], 'd'), false);
+  });
+});
+describe('fromMeToYou()', function () {
+  it('should return the sentence where "me" is replaced with "you"', function () {
+    assert.equal(fromMeToYou('that made me laugh'), 'that made you laugh');
+    assert.equal(fromMeToYou('love me or hate me'), 'love you or hate you');
   });
 });
