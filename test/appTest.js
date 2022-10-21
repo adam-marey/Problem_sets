@@ -7,7 +7,7 @@ const doesKeyExist = require('../problems/objects/doesKeyExist');
 const twoDimensionalTotal = require('../problems/arrays/twoDimensionalTotal');
 const valueCounter = require('../problems/objects/valueCounter');
 const oddRange = require('../problems/arrays/oddRange');
-const isElement = require('../problems/arrays/isElement ');
+const isElement = require('../problems/arrays/isElement');
 describe('isSorted()', function () {
   it('should return boolean true if numbers in array are in increasing order, false otherwise', function () {
     assert.equal(isSorted([3, 5, 11, 9, 15, 16]), false);
